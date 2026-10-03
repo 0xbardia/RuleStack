@@ -1,0 +1,16 @@
+# RuleStack test and certification dependencies.
+#
+# genlayer-test provides Direct Mode (pytest tests/direct/test_rulestack.py)
+# and pulls in genlayer-py, which the hosted Studionet certifier
+# (tests/studio/certify_studionet.py) uses for LATEST_FINAL reads.
+#
+# Version note: the published Direct Mode runner is gltest 0.29.2, reached via
+# `pip install genlayer-test`. The historical v0.29.2 git tag is also valid but
+# the PyPI release is what the release commands below were verified against.
+genlayer-test==0.29.2
+
+# cloudpickle: the nondet leader/validator closures are pickled across the
+# validator boundary, so the pickling test needs it explicitly.
+cloudpickle>=3
+
+pytest>=8

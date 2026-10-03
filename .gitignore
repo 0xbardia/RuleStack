@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and caches
+*.log
+.cache/
+.DS_Store
+Thumbs.db
+
+# GenLayer local run artifacts
+.gltest-artifacts/
+.rulestack/
+
+# Local scratch probes (not part of the release)
+tests/_*.py
+tests/studio/_*.py
+
+# Grok app-builder workspace scaffolding (unrelated to this Python project)
+AGENTS.md
+eslint.config.mjs
+tsconfig.json
+vercel.json
+package-lock.json
